@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentia AI — Social Media Sentiment Intelligence Platform</title>
+  <meta name="description" content="Enterprise-grade AI platform for multi-platform social media sentiment analytics using TF-IDF and Machine Learning.">
+  
+  <!-- Google Fonts & Chart.js CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- Design System & Components -->
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+
+  <!-- Toast Notification Root -->
+  <div id="toast-container"></div>
+
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-logo-icon">S</div>
+        <div class="brand-text">
+          <h2>Sentia AI</h2>
+        </div>
+        <span class="brand-badge">SaaS</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Overview</div>
+        <div class="nav-item active" data-tab="landing">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span>Welcome & Overview</span>
+        </div>
+        <div class="nav-item" data-tab="dashboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+          <span>Command Center</span>
+        </div>
+
+        <div class="nav-section-title">Inference Workflows</div>
+        <div class="nav-item" data-tab="single">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          <span>Single Post Analysis</span>
+        </div>
+        <div class="nav-item" data-tab="bulk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+          <span>Batch & CSV Upload</span>
+        </div>
+
+        <div class="nav-section-title">Intelligence & Data</div>
+        <div class="nav-item" data-tab="analytics">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          <span>Advanced Drilldown</span>
+        </div>
+        <div class="nav-item" data-tab="dataset">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+          <span>50K Dataset Explorer</span>
+          <span class="nav-badge">50k</span>
+        </div>
+        <div class="nav-item" data-tab="model">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          <span>Model & Metrics</span>
+          <span class="nav-badge">89.3%</span>
+        </div>
+
+        <div class="nav-section-title">Governance</div>
+        <div class="nav-item" data-tab="history">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>Audit History</span>
+        </div>
+        <div class="nav-item" data-tab="reports">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Executive Reports</span>
+        </div>
+        <div class="nav-item" data-tab="settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          <span>Preferences</span>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="model-status-indicator">
+          <div class="status-dot" id="model-status-dot"></div>
+          <span id="model-status-text">TF-IDF Model Online</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="app-main">
+      <!-- Top Sticky Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <button class="mobile-menu-btn" aria-label="Toggle navigation">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <div class="header-page-title">
+            <h1 id="header-title-text">Welcome to Sentia AI</h1>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <!-- Live Engine Status Badge -->
+          <div class="header-engine-status">
+            <span class="engine-live-dot"></span>
+            <span>Sentence & ML Engine Active</span>
+          </div>
+
+          <!-- Dark / Light theme toggle -->
+          <button class="theme-toggle-btn" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+            <span class="theme-toggle-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </button>
+
+          <!-- Quick Action CTA -->
+          <button class="header-cta-btn" data-navigate="single">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            <span>Analyze Post</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Page Views Container -->
+      <div class="page-container">
+
+        <!-- ================================================================
+             1. LANDING & HERO VIEW
+             ================================================================ -->
+        <section id="view-landing" class="view-pane active">
+          <div class="hero-section">
+            <div class="hero-pill">
+              <span class="status-dot"></span>
+              <span>Enterprise Sentiment Intelligence • 50K Records Trained</span>
+            </div>
+            <h1 class="hero-title">
+              Decode the Voice of Your Audience with <span class="text-gradient">Sentia AI</span>
+            </h1>
+            <p class="hero-subtitle">
+              Transform unstructured social media narratives across 7 major networks into real-time actionable sentiment signals, toxicity safeguards, and virality diagnostics.
+            </p>
+            <div class="hero-cta-group">
+              <button class="btn btn-primary" data-navigate="dashboard">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+                Launch Command Center
+              </button>
+              <button class="btn btn-secondary" data-navigate="single">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                Test Live Prediction
+              </button>
+            </div>
+          </div>
+
+          <!-- Feature Cards -->
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <h4>Sub-Millisecond Inference</h4>
+              <p>Pre-vectorized TF-IDF n-gram model provides lightning fast sentiment probabilities without heavy GPU latency or external cloud API costs.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              </div>
+              <h4>50,000 Verified Records</h4>
+              <p>Trained and benchmarked on 50k real multi-platform posts across Facebook, Instagram, LinkedIn, Reddit, TikTok, Twitter, and YouTube.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              </div>
+              <h4>Automated Bulk Batching</h4>
+              <p>Drag and drop large CSV or Excel datasets to generate cohort sentiment distributions, metrics summaries, and exportable predictions.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             2. DASHBOARD COMMAND CENTER
+             ================================================================ -->
+        <section id="view-dashboard" class="view-pane">
+          <div class="view-header">
+            <div class="view-header-content">
+              <h2>Executive Command Center</h2>
+              <p>Real-time analytics across 50,000 indexed posts, sentiment distributions, and temporal trends.</p>
+            </div>
+            <div class="btn-toggle-group">
+              <button class="toggle-btn trend-toggle-btn active" data-range="all">All-Time</button>
+              <button class="toggle-btn trend-toggle-btn" data-range="1y">1 Year</button>
+              <button class="toggle-btn trend-toggle-btn" data-range="90d">90 Days</button>
+              <button class="toggle-btn trend-toggle-btn" data-range="30d">30 Days</button>
+            </div>
+          </div>
+
+          <!-- KPI Cards -->
+          <div class="kpi-grid">
+            <div class="kpi-card kpi-primary">
+              <div class="kpi-header">
+                <span class="kpi-title">Total Posts Analyzed</span>
+                <div class="kpi-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                </div>
+              </div>
+              <div class="kpi-value" id="dash-kpi-total">50,000</div>
+              <div class="kpi-footer">Across 7 Global Networks</div>
+            </div>
+
+            <div class="kpi-card kpi-positive">
+              <div class="kpi-header">
+                <span class="kpi-title">Positive Posts</span>
+                <div class="kpi-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+                </div>
+              </div>
+              <div class="kpi-value" id="dash-kpi-pos">17,746</div>
+              <div class="kpi-footer">
+                <span class="kpi-badge positive" id="dash-kpi-pos-pct">35.5%</span>
+                <span>of total voice</span>
+              </div>
+            </div>
+
+            <div class="kpi-card kpi-negative">
+              <div class="kpi-header">
+                <span class="kpi-title">Negative Posts</span>
+                <div class="kpi-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-3"></path></svg>
+                </div>
+              </div>
+              <div class="kpi-value" id="dash-kpi-neg">17,401</div>
+              <div class="kpi-footer">
+                <span class="kpi-badge negative" id="dash-kpi-neg-pct">34.8%</span>
+                <span>of total voice</span>
+              </div>
+            </div>
+
+            <div class="kpi-card kpi-neutral">
+              <div class="kpi-header">
+                <span class="kpi-title">Neutral Posts</span>
+                <div class="kpi-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                </div>
+              </div>
+              <div class="kpi-value" id="dash-kpi-neu">14,853</div>
+              <div class="kpi-footer">
+                <span class="kpi-badge neutral" id="dash-kpi-neu-pct">29.7%</span>
+                <span>informational posts</span>
+              </div>
+            </div>
+
+            <div class="kpi-card kpi-info">
+              <div class="kpi-header">
+                <span class="kpi-title">Engagement Virality</span>
+                <div class="kpi-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+              </div>
+              <div class="kpi-value" id="dash-kpi-likes">319 avg</div>
+              <div class="kpi-footer">Likes per discussion</div>
+            </div>
+          </div>
+
+          <!-- Charts Row 1: Donut & Temporal Trends -->
+          <div class="chart-grid-1-2">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">
+                  <h3>Sentiment Distribution</h3>
+                  <div class="card-subtitle">Global breakdown of polarity</div>
+                </div>
+              </div>
+              <div class="chart-wrapper">
+                <canvas id="dash-donut-chart"></canvas>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">
+                  <h3>Temporal Sentiment Volume</h3>
+                  <div class="card-subtitle">Monthly trajectory over time</div>
+                </div>
+              </div>
+              <div class="chart-wrapper">
+                <canvas id="dash-trend-chart"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charts Row 2: Platforms & Topics -->
+          <div class="chart-grid-2">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">
+                  <h3>Platform Polarization Breakdown</h3>
+                  <div class="card-subtitle">Sentiment by social network</div>
+                </div>
+              </div>
+              <div class="chart-wrapper">
+                <canvas id="dash-platform-chart"></canvas>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">
+                  <h3>Top Discussion Topics</h3>
+                  <div class="card-subtitle">Highest volume categories</div>
+                </div>
+              </div>
+              <div class="chart-wrapper">
+                <canvas id="dash-topics-chart"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI Data Insights -->
+          <div class="card" style="margin-bottom: 2rem;">
+            <div class="card-header">
+              <div class="card-title">
+                <h3>Automated Intelligence Insights</h3>
+                <div class="card-subtitle">Statistical observations derived from 50,000 records</div>
+              </div>
+            </div>
+            <div class="insight-grid" id="dash-insights-container">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             3. SINGLE POST SENTIMENT ANALYSIS
+             ================================================================ -->
+        <section id="view-single" class="view-pane">
+          <div class="view-header">
+            <div class="view-header-content">
+              <h2>Live Sentiment Inference Engine</h2>
+              <p>Enter any text or social media caption to inspect sentiment, probability distribution, and key predictive tokens.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <!-- Preset Quick Chips with Clear Linguistic Categories -->
+            <div class="form-group">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem;">
+                <label class="form-label" style="margin-bottom: 0;">Try Sentence-Aware Benchmark Presets:</label>
+                <span style="font-size: 0.75rem; color: var(--brand-primary); font-weight: 600;">⚡ Tests full-sentence discourse & negations</span>
+              </div>
+              <div class="chips-container">
+                <button class="chip-btn sample-chip" data-platform="Twitter" data-text="The design looks sleek and modern, but it crashes constantly and ruined my presentation.">
+                  <span class="chip-category">Contrast Conjunction:</span> "Sleek, BUT crashes & ruined..." (Negative)
+                </button>
+                <button class="chip-btn sample-chip" data-platform="LinkedIn" data-text="Not bad at all, actually quite decent and worth every penny!">
+                  <span class="chip-category">Negation Flip:</span> "Not bad at all, quite decent..." (Positive)
+                </button>
+                <button class="chip-btn sample-chip" data-platform="Reddit" data-text="I thought it would be amazing, but it turned out to be a complete disappointment.">
+                  <span class="chip-category">Unmet Expectation:</span> "Thought amazing, BUT disappointment..." (Negative)
+                </button>
+                <button class="chip-btn sample-chip" data-platform="Twitter" data-text="Never buy this garbage, customer service was completely awful and refused to help!">
+                  <span class="chip-category">Severe Boycott:</span> "Never buy this garbage, awful..." (Negative)
+                </button>
+                <button class="chip-btn sample-chip" data-platform="Instagram" data-text="Couldn't be happier with this update! Absolute fire and works like a charm 🔥❤️">
+                  <span class="chip-category">Superlative Praise:</span> "Couldn't be happier! Absolute fire 🔥" (Positive)
+                </button>
+                <button class="chip-btn sample-chip" data-platform="YouTube" data-text="Here is the scheduled software update timeline and maintenance release notes.">
+                  <span class="chip-category">Objective Neutral:</span> "Software update schedule notes..." (Neutral)
+                </button>
+              </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="form-group">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                <label class="form-label" for="single-text-input">Post Text / Content</label>
+                <div style="font-size: 0.78rem; color: var(--text-muted);">
+                  <span id="char-count">0 characters</span> • <span id="word-count">0 words</span>
+                </div>
+              </div>
+              <textarea id="single-text-input" class="form-control" rows="4" placeholder="Type or paste any complex social media sentence here... (e.g. 'The product is good, but the support was awful.') Press Ctrl + Enter to analyze."></textarea>
+            </div>
+
+            <!-- Platform Selector & Action Buttons -->
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <label class="form-label" style="margin-bottom: 0;" for="single-platform-select">Platform Context:</label>
+                <select id="single-platform-select" class="form-control" style="width: auto; padding: 0.5rem 0.85rem;">
+                  <option value="Direct Input">Direct Input</option>
+                  <option value="Twitter">Twitter / X</option>
+                  <option value="Reddit">Reddit</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Facebook">Facebook</option>
+                  <option value="LinkedIn">LinkedIn</option>
+                  <option value="TikTok">TikTok</option>
+                  <option value="YouTube">YouTube</option>
+                </select>
+              </div>
+
+              <div style="display: flex; gap: 0.75rem;">
+                <button id="single-clear-btn" class="btn btn-secondary">Clear</button>
+                <button id="single-analyze-btn" class="btn btn-primary">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  Analyze Full Sentence
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prediction Result Card -->
+          <div id="single-result-card" class="prediction-card" style="display: none;">
+            <!-- Hero Layout -->
+            <div class="pred-hero-layout">
+              <div>
+                <div class="pred-kicker">Detected Sentiment Polarity</div>
+                <div id="pred-badge-container">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+
+              <!-- Confidence Radial SVG Ring -->
+              <div class="confidence-ring-container">
+                <div class="ring-score-text">
+                  <div class="score-value" id="confidence-val-text">0%</div>
+                  <div class="score-label">Confidence Score</div>
+                </div>
+                <svg width="84" height="84" viewBox="0 0 84 84">
+                  <circle cx="42" cy="42" r="34" stroke="var(--bg-surface-elevated)" stroke-width="6" fill="none" />
+                  <circle id="confidence-svg-circle" cx="42" cy="42" r="34" stroke="var(--sentiment-pos)" stroke-width="6" fill="none" stroke-linecap="round" transform="rotate(-90 42 42)" style="transition: stroke-dashoffset 0.8s ease;" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Full-Sentence Composition & Discourse Understanding Section -->
+            <div class="sentence-understanding-card" id="sentence-understanding-box">
+              <div class="sentence-card-header">
+                <div class="sentence-header-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                  <span>Full-Sentence Semantic & Discourse Breakdown</span>
+                </div>
+                <span class="sentence-engine-pill">Sentence-Level AI</span>
+              </div>
+
+              <!-- Continuous Bipolar Spectrum Meter -->
+              <div class="compound-meter-container">
+                <div class="compound-meter-labels">
+                  <span class="meter-lbl-neg">−1.0 Extreme Negative</span>
+                  <span class="meter-lbl-neu">0.0 Neutral</span>
+                  <span class="meter-lbl-pos">+1.0 Extreme Positive</span>
+                </div>
+                <div class="compound-meter-track">
+                  <div id="compound-meter-pin" class="compound-meter-pin" style="left: 50%;">
+                    <div class="meter-pin-dot"></div>
+                    <div id="compound-meter-val" class="meter-pin-tooltip">0.00</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Structural Reasoning Callout -->
+              <div class="sentence-reasoning-callout" id="sentence-reasoning-text">
+                Analyzing sentence structure and discourse connectives...
+              </div>
+
+              <!-- Clause Breakdown Flow -->
+              <div class="clauses-breakdown-wrapper" id="clauses-wrapper" style="display: none;">
+                <div class="subheading-micro">Clause-by-Clause Semantic Trajectory:</div>
+                <div id="clauses-flow-container" class="clauses-flow-container">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+
+              <!-- Negation Resolution Tags -->
+              <div class="negations-breakdown-wrapper" id="negations-wrapper" style="display: none;">
+                <div class="subheading-micro">Syntactic Negation Scope:</div>
+                <div id="negations-flow-container" class="negations-flow-container">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Probability Bars -->
+            <div style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
+              <h4 style="font-size: 0.9rem; margin-bottom: 0.85rem; color: var(--text-secondary);">Calibrated Model Probability Distribution:</h4>
+              <div class="prob-bars">
+                <div class="prob-row">
+                  <span class="prob-label">Positive</span>
+                  <div class="prob-bar-track">
+                    <div id="prob-bar-pos" class="prob-bar-fill prob-fill-positive" style="width: 0%;"></div>
+                  </div>
+                  <span class="prob-val" id="prob-val-pos">0%</span>
+                </div>
+                <div class="prob-row">
+                  <span class="prob-label">Negative</span>
+                  <div class="prob-bar-track">
+                    <div id="prob-bar-neg" class="prob-bar-fill prob-fill-negative" style="width: 0%;"></div>
+                  </div>
+                  <span class="prob-val" id="prob-val-neg">0%</span>
+                </div>
+                <div class="prob-row">
+                  <span class="prob-label">Neutral</span>
+                  <div class="prob-bar-track">
+                    <div id="prob-bar-neu" class="prob-bar-fill prob-fill-neutral" style="width: 0%;"></div>
+                  </div>
+                  <span class="prob-val" id="prob-val-neu">0%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Preprocessed Cleaned Text & Feature Weights -->
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 1.25rem;">
+              <h4 style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Normalized Text:</h4>
+              <p id="pred-cleaned-text" style="font-family: var(--font-mono); font-size: 0.84rem; background: var(--bg-surface-elevated); padding: 0.65rem 0.85rem; border-radius: var(--radius-xs); margin-bottom: 1rem;"></p>
+
+              <h4 style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Key Predictive Tokens & Semantic Features:</h4>
+              <div id="pred-features-container" class="feature-tags">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             4. BULK & BATCH CSV ANALYSIS
+             ================================================================ -->
+        <section id="view-bulk" class="view-pane">
+          <div class="view-header">
+            <div class="view-header-content">
+              <h2>Batch Sentiment & CSV Upload</h2>
+              <p>Analyze thousands of posts simultaneously by uploading a CSV or Excel spreadsheet.</p>
+            </div>
+            <div>
+              <button id="download-sample-csv-btn" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Download Sample Template
+              </button>
+            </div>
+          </div>
+
+          <!-- Dropzone -->
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <div id="bulk-dropzone" class="dropzone">
+              <input type="file" id="bulk-file-input" accept=".csv, .xlsx, .xls" style="display: none;">
+              <div class="dropzone-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+              </div>
+              <h3 class="dropzone-title">Drop your CSV or Excel file here</h3>
+              <p class="dropzone-hint">Supports .csv, .xlsx files with a "Text" or "Post" column (up to 2,000 rows per batch)</p>
+            </div>
+          </div>
+
+          <!-- Processing Progress -->
+          <div id="bulk-progress-card" class="card" style="display: none; margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.65rem;">
+              <span id="bulk-progress-status" style="font-weight: 600;">Processing batch...</span>
+            </div>
+            <div class="prob-bar-track" style="height: 8px;">
+              <div id="bulk-progress-bar" class="prob-bar-fill" style="width: 0%; background: var(--brand-primary);"></div>
+            </div>
+          </div>
+
+          <!-- Batch Results Summary -->
+          <div id="bulk-summary-card" style="display: none;">
+            <!-- KPIs -->
+            <div class="kpi-grid">
+              <div class="kpi-card kpi-primary">
+                <div class="kpi-header"><span class="kpi-title">Batch Total</span></div>
+                <div class="kpi-value" id="bulk-total-count">0</div>
+                <div class="kpi-footer">Posts Analyzed</div>
+              </div>
+              <div class="kpi-card kpi-positive">
+                <div class="kpi-header"><span class="kpi-title">Positive</span></div>
+                <div class="kpi-value" id="bulk-pos-count">0</div>
+                <div class="kpi-footer"><span class="kpi-badge positive" id="bulk-pos-pct">0%</span></div>
+              </div>
+              <div class="kpi-card kpi-negative">
+                <div class="kpi-header"><span class="kpi-title">Negative</span></div>
+                <div class="kpi-value" id="bulk-neg-count">0</div>
+                <div class="kpi-footer"><span class="kpi-badge negative" id="bulk-neg-pct">0%</span></div>
+              </div>
+              <div class="kpi-card kpi-neutral">
+                <div class="kpi-header"><span class="kpi-title">Neutral</span></div>
+                <div class="kpi-value" id="bulk-neu-count">0</div>
+                <div class="kpi-footer"><span class="kpi-badge neutral" id="bulk-neu-pct">0%</span></div>
+              </div>
+            </div>
+
+            <!-- Batch Donut & Table -->
+            <div class="chart-grid-1-2">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">
+                    <h3>Batch Polarity Distribution</h3>
+                  </div>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="bulk-donut-chart"></canvas>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">
+                    <h3>Batch Predictions Preview</h3>
+                  </div>
+                  <div class="card-actions">
+                    <select id="bulk-table-sentiment-filter" class="form-control" style="width: auto; padding: 4px 8px; font-size: 0.8rem;">
+                      <option value="all">All Sentiments</option>
+                      <option value="positive">Positive Only</option>
+                      <option value="negative">Negative Only</option>
+                      <option value="neutral">Neutral Only</option>
+                    </select>
+                    <button id="bulk-export-results-btn" class="btn btn-primary" style="padding: 4px 10px; font-size: 0.8rem;">
+                      Export CSV
+                    </button>
+                  </div>
+                </div>
+
+                <div class="table-responsive" style="max-height: 380px;">
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Text Content</th>
+                        <th>Predicted Polarity</th>
+                        <th>Confidence</th>
+                      </tr>
+                    </thead>
+                    <tbody id="bulk-results-tbody">
+                      <!-- Rendered dynamically -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             5. ADVANCED ANALYTICS DRILLDOWN
+             ================================================================ -->
+        <section id="view-analytics" class="view-pane">
+          <div class="view-header">
+            <div class="view-header-content">
+              <h2>Multi-Dimensional Analytics Drilldown</h2>
+              <p>Filter across platforms, topics, and sentiments to expose nuanced behavioral trends.</p>
+            </div>
+          </div>
+
+          <!-- Filter Toolbar -->
+          <div class="card" style="margin-bottom: 1.5rem; padding: 1.25rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; align-items: flex-end;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label">Platform Filter</label>
+                <select id="analytics-filter-platform" class="form-control">
+                  <option value="all">All Platforms (7)</option>
+                  <option value="Twitter">Twitter / X</option>
+                  <option value="Reddit">Reddit</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Facebook">Facebook</option>
+                  <option value="LinkedIn">LinkedIn</option>
+                  <option value="TikTok">TikTok</option>
+                  <option value="YouTube">YouTube</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label">Topic Cohort</label>
+                <select id="analytics-filter-topic" class="form-control">
+                  <option value="all">All Topics (94)</option>
+                  <option value="Cyberbullying">Cyberbullying</option>
+                  <option value="Workplace">Workplace</option>
+                  <option value="Workplace Stress">Workplace Stress</option>
+                  <option value="Education Technology">Education Technology</option>
+                  <option value="Artificial Intelligence">Artificial Intelligence</option>
+                  <option value="Machine Learning">Machine Learning</option>
+                  <option value="Startups">Startups</option>
+                  <option value="Cost of Living">Cost of Living</option>
+                  <option value="Remote Work">Remote Work</option>
+                  <option value="Photography">Photography</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label">Sentiment Class</label>
+                <select id="analytics-filter-sentiment" class="form-control">
+                  <option value="all">All Classes</option>
+                  <option value="Positive">Positive Only</option>
+                  <option value="Negative">Negative Only</option>
+                  <option value="Neutral">Neutral Only</option>
+                </select>
+              </div>
+
+              <div style="display: flex; gap: 0.5rem;">
+                <button id="analytics-apply-filters-btn" class="btn btn-primary" style="flex: 1;">Apply Filters</button>
+                <button id="analytics-reset-filters-btn" class="btn btn-secondary">Reset</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- KPIs Row -->
+          <div class="kpi-grid">
+            <div class="kpi-card kpi-primary">
+              <div class="kpi-header"><span class="kpi-title">Filtered Posts</span></div>
+              <div class="kpi-value" id="adv-kpi-total">50,000</div>
+            </div>
+            <div class="kpi-card kpi-positive">
+              <div class="kpi-header"><span class="kpi-title">Positive Ratio</span></div>
+              <div class="kpi-value" id="adv-kpi-pos">35.5%</div>
+            </div>
+            <div class="kpi-card kpi-negative">
+              <div class="kpi-header"><span class="kpi-title">Negative Ratio</span></div>
+              <div class="kpi-value" id="adv-kpi-neg">34.8%</div>
+            </div>
+            <div class="kpi-card kpi-neutral">
+              <div class="kpi-header"><span class="kpi-title">Neutral Ratio</span></div>
+              <div class="kpi-value" id="adv-kpi-neu">29.7%</div>
+            </div>
+          </div>
+
+          <!-- Charts Grid -->
+          <div class="chart-grid-2">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">
+                  <h3>Cohort Polarity Breakdown</h3>
+                </div>
+              </div>
+              <div class="chart-wrapper">
+                <canvas id="adv-donut-chart"></canvas>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">
+                  <h3>Platform Comparison</h3>
+                </div>
+              </div>
+              <div class="chart-wrapper">
+                <canvas id="adv-platform-chart"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-grid-2">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">
+                  <h3>Topic Sentiment Distribution</h3>
+                </div>
+              </div>
+              <div class="chart-wrapper">
+                <canvas id="adv-topic-chart"></canvas>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">
+                  <h3>Engagement By Sentiment</h3>
+                  <div class="card-subtitle">Avg Likes, Shares, Comments</div>
+                </div>
+              </div>
+              <div class="chart-wrapper">
+                <canvas id="adv-engagement-chart"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drilldown Insights -->
+          <div class="card" style="margin-bottom: 2rem;">
+            <div class="card-header">
+              <div class="card-title">
+                <h3>Cohort Risk & Virality Highlights</h3>
+              </div>
+            </div>
+            <div class="insight-grid" id="adv-insights-container"></div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             6. 50,000 DATASET EXPLORER
+             ================================================================ -->
+        <section id="view-dataset" class="view-pane">
+          <div class="view-header">
+            <div class="view-header-content">
+              <h2>50,000 Post Dataset Explorer</h2>
+              <p>Explore raw verified records with full search, platform filtering, engagement metrics, and instant pagination.</p>
+            </div>
+            <button id="dataset-export-btn" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Export Visible CSV
+            </button>
+          </div>
+
+          <!-- Dataset Controls -->
+          <div class="card" style="margin-bottom: 1.5rem; padding: 1rem 1.25rem;">
+            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+              <div style="flex: 1; min-width: 260px;">
+                <input type="text" id="dataset-search-input" class="form-control" placeholder="Search by text, username (@), or hashtags...">
+              </div>
+              <div style="width: 180px;">
+                <select id="dataset-filter-platform" class="form-control">
+                  <option value="">All Platforms</option>
+                  <option value="Twitter">Twitter</option>
+                  <option value="Reddit">Reddit</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Facebook">Facebook</option>
+                  <option value="LinkedIn">LinkedIn</option>
+                  <option value="TikTok">TikTok</option>
+                  <option value="YouTube">YouTube</option>
+                </select>
+              </div>
+              <div style="width: 160px;">
+                <select id="dataset-filter-sentiment" class="form-control">
+                  <option value="">All Sentiments</option>
+                  <option value="Positive">Positive</option>
+                  <option value="Negative">Negative</option>
+                  <option value="Neutral">Neutral</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Table Card -->
+          <div class="card" style="margin-bottom: 2rem;">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Post ID</th>
+                    <th>Date</th>
+                    <th>Platform</th>
+                    <th>Username</th>
+                    <th>Post Text Content</th>
+                    <th>Sentiment</th>
+                    <th>Engagement</th>
+                  </tr>
+                </thead>
+                <tbody id="dataset-table-tbody">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Pagination Bar -->
+            <div class="pagination-bar">
+              <div id="dataset-counter-label" style="font-size: 0.82rem; color: var(--text-muted);">
+                Showing records...
+              </div>
+              <div class="pagination-controls" id="dataset-pagination-container">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             7. MODEL TRANSPARENCY & PERFORMANCE
+             ================================================================ -->
+        <section id="view-model" class="view-pane">
+          <div class="view-header">
+            <div class="view-header-content">
+              <h2>Model Transparency & Performance Assurance</h2>
+              <p>Rigorous test set evaluation on 10,000 held-out samples, confusion matrix, and feature explainability.</p>
+            </div>
+          </div>
+
+          <!-- Model KPIs -->
+          <div class="kpi-grid">
+            <div class="kpi-card kpi-positive">
+              <div class="kpi-header"><span class="kpi-title">Test Accuracy</span></div>
+              <div class="kpi-value" id="model-kpi-acc">89.31%</div>
+              <div class="kpi-footer">Exact hold-out test set</div>
+            </div>
+            <div class="kpi-card kpi-primary">
+              <div class="kpi-header"><span class="kpi-title">Macro F1 Score</span></div>
+              <div class="kpi-value" id="model-kpi-macro-f1">89.28%</div>
+              <div class="kpi-footer">Balanced across 3 classes</div>
+            </div>
+            <div class="kpi-card kpi-info">
+              <div class="kpi-header"><span class="kpi-title">Feature Dimensions</span></div>
+              <div class="kpi-value" id="model-kpi-features">100,000</div>
+              <div class="kpi-footer">Sublinear TF-IDF (1,2)-grams</div>
+            </div>
+            <div class="kpi-card kpi-neutral">
+              <div class="kpi-header"><span class="kpi-title">Hold-out Test Set</span></div>
+              <div class="kpi-value" id="model-kpi-test-samples">10,000</div>
+              <div class="kpi-footer">Ground truth posts</div>
+            </div>
+          </div>
+
+          <!-- Confusion Matrix & Classification Report -->
+          <div class="chart-grid-2">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">
+                  <h3>Confusion Matrix Heatmap</h3>
+                  <div class="card-subtitle">Predicted vs True labels (10,000 samples)</div>
+                </div>
+              </div>
+              <div id="confusion-matrix-container">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">
+                  <h3>Class-Level Precision & Recall</h3>
+                  <div class="card-subtitle">Detailed classification metrics</div>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Class</th>
+                      <th>Precision</th>
+                      <th>Recall</th>
+                      <th>F1-Score</th>
+                      <th>Test Samples</th>
+                    </tr>
+                  </thead>
+                  <tbody id="classification-report-tbody">
+                    <!-- Rendered dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Top Feature N-Grams -->
+          <div class="card" style="margin-bottom: 2rem;">
+            <div class="card-header">
+              <div class="card-title">
+                <h3>Top Discriminative N-Grams by Sentiment</h3>
+                <div class="card-subtitle">Highest positive coefficient weights in the Multinomial Logistic Model</div>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+              <div>
+                <h4 style="color: var(--sentiment-pos); margin-bottom: 0.75rem; font-size: 0.95rem;">
+                  Positive Indicators (+)
+                </h4>
+                <div id="top-features-positive" class="feature-tags"></div>
+              </div>
+              <div>
+                <h4 style="color: var(--sentiment-neg); margin-bottom: 0.75rem; font-size: 0.95rem;">
+                  Negative Indicators (-)
+                </h4>
+                <div id="top-features-negative" class="feature-tags"></div>
+              </div>
+              <div>
+                <h4 style="color: var(--sentiment-neu); margin-bottom: 0.75rem; font-size: 0.95rem;">
+                  Neutral Indicators (Informational)
+                </h4>
+                <div id="top-features-neutral" class="feature-tags"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             8. AUDIT HISTORY VIEW
+             ================================================================ -->
+        <section id="view-history" class="view-pane">
+          <div class="view-header">
+            <div class="view-header-content">
+              <h2>Prediction Audit Log</h2>
+              <p>Review logged sentiment predictions with timestamps and confidence scores.</p>
+            </div>
+            <div style="display: flex; gap: 0.75rem;">
+              <button id="history-export-btn" class="btn btn-secondary">Export Log</button>
+              <button id="history-clear-btn" class="btn btn-danger">Clear History</button>
+            </div>
+          </div>
+
+          <div class="card" style="margin-bottom: 1.5rem; padding: 1rem 1.25rem;">
+            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+              <div style="flex: 1; min-width: 260px;">
+                <input type="text" id="history-search-input" class="form-control" placeholder="Search audit history...">
+              </div>
+              <div style="width: 180px;">
+                <select id="history-filter-sentiment" class="form-control">
+                  <option value="">All Sentiments</option>
+                  <option value="Positive">Positive</option>
+                  <option value="Negative">Negative</option>
+                  <option value="Neutral">Neutral</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Timestamp</th>
+                    <th>Platform</th>
+                    <th>Analyzed Text</th>
+                    <th>Sentiment</th>
+                    <th>Confidence</th>
+                    <th style="text-align: right;">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="history-table-tbody">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             9. EXECUTIVE INTELLIGENCE REPORT
+             ================================================================ -->
+        <section id="view-reports" class="view-pane">
+          <div class="view-header">
+            <div class="view-header-content">
+              <h2>Executive Sentiment Intelligence Report</h2>
+              <p>Board-ready executive briefing summarizing sentiment distributions, risk factors, and recommendations.</p>
+            </div>
+            <div style="display: flex; gap: 0.75rem;">
+              <button id="report-download-json-btn" class="btn btn-secondary">Download JSON</button>
+              <button id="report-print-btn" class="btn btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                Print / Save as PDF
+              </button>
+            </div>
+          </div>
+
+          <div class="card" style="max-width: 900px; margin: 0 auto 3rem auto; padding: 2.5rem;">
+            <div style="border-bottom: 2px solid var(--border-default); padding-bottom: 1.5rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-start;">
+              <div>
+                <h2 style="font-size: 1.85rem; margin-bottom: 0.4rem;">SENTIA AI</h2>
+                <div style="font-size: 0.95rem; color: var(--text-secondary);">Enterprise Sentiment Intelligence Briefing</div>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Generated on:</div>
+                <div id="report-date" style="font-weight: 600;">Loading date...</div>
+              </div>
+            </div>
+
+            <!-- Report KPI Bar -->
+            <div class="kpi-grid" style="grid-template-columns: repeat(4, 1fr); margin-bottom: 2rem;">
+              <div class="kpi-card" style="padding: 1rem;">
+                <div class="kpi-title">Indexed Records</div>
+                <div class="kpi-value" id="report-total-posts" style="font-size: 1.5rem;">50,000</div>
+              </div>
+              <div class="kpi-card kpi-positive" style="padding: 1rem;">
+                <div class="kpi-title">Positive Share</div>
+                <div class="kpi-value" id="report-pos-ratio" style="font-size: 1.5rem;">35.5%</div>
+              </div>
+              <div class="kpi-card kpi-negative" style="padding: 1rem;">
+                <div class="kpi-title">Negative Share</div>
+                <div class="kpi-value" id="report-neg-ratio" style="font-size: 1.5rem;">34.8%</div>
+              </div>
+              <div class="kpi-card kpi-info" style="padding: 1rem;">
+                <div class="kpi-title">Model Accuracy</div>
+                <div class="kpi-value" id="report-model-acc" style="font-size: 1.5rem;">89.31%</div>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+              <h3 style="font-size: 1.15rem; margin-bottom: 0.85rem;">1. Key Analytical Observations</h3>
+              <ul id="report-findings-list" style="padding-left: 1.25rem; line-height: 1.6; color: var(--text-secondary);">
+                <!-- Rendered dynamically -->
+              </ul>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+              <h3 style="font-size: 1.15rem; margin-bottom: 0.85rem;">2. Strategic Action Items</h3>
+              <ul id="report-recs-list" style="padding-left: 1.25rem; line-height: 1.6; color: var(--text-secondary);">
+                <!-- Rendered dynamically -->
+              </ul>
+            </div>
+
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 1.25rem; font-size: 0.8rem; color: var(--text-muted); display: flex; justify-content: space-between;">
+              <span>Sentia AI Platform • Confidential Executive Briefing</span>
+              <span>Classification: Internal SaaS Analytics</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             10. SETTINGS & PREFERENCES
+             ================================================================ -->
+        <section id="view-settings" class="view-pane">
+          <div class="view-header">
+            <div class="view-header-content">
+              <h2>Platform Preferences</h2>
+              <p>Configure theme modes, inference thresholds, and review API diagnostics.</p>
+            </div>
+          </div>
+
+          <div class="card" style="max-width: 680px;">
+            <div class="form-group">
+              <label class="form-label">Theme Mode</label>
+              <div class="btn-toggle-group" style="width: 100%;">
+                <button class="toggle-btn theme-toggle-btn" style="flex: 1;">Dark Theme (Default)</button>
+                <button class="toggle-btn theme-toggle-btn" style="flex: 1;">Light Theme</button>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 1.5rem;">
+              <label class="form-label">Confidence Threshold Safeguard</label>
+              <input type="range" min="50" max="95" value="65" class="form-control" style="padding: 0;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-muted); margin-top: 0.35rem;">
+                <span>Lenient (50%)</span>
+                <span>Standard (65%)</span>
+                <span>Strict (95%)</span>
+              </div>
+            </div>
+
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 1.25rem; margin-top: 1.5rem;">
+              <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Backend Engine Details</h4>
+              <p style="font-size: 0.82rem; color: var(--text-muted);">
+                Algorithm: Scikit-learn TF-IDF + Multinomial Logistic Regression (C=2)<br>
+                Model Location: <code>models/sentiment_model.pkl</code><br>
+                Dataset: <code>social_media_sentiment_dataset_50k.csv</code> (50,000 rows)<br>
+                Server Engine: Python 3.14 Flask RESTful API
+              </p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Application Scripts -->
+  <script src="/js/toast.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/charts.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

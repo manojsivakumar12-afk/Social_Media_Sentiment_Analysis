@@ -1,0 +1,1231 @@
+[
+  {
+    "id": "hist_1789286271266",
+    "timestamp": "2026-09-13 13:27:51",
+    "text": "Here is the scheduled software update timeline and maintenance release notes.",
+    "sentiment": "Neutral",
+    "confidence": 0.7482,
+    "platform": "YouTube",
+    "probabilities": {
+      "Negative": 0.148,
+      "Neutral": 0.7482,
+      "Positive": 0.1039
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1789286269308",
+    "timestamp": "2026-09-13 13:27:49",
+    "text": "Couldn't be happier with this update! Absolute fire and works like a charm 🔥❤️",
+    "sentiment": "Positive",
+    "confidence": 0.7361,
+    "platform": "Instagram",
+    "probabilities": {
+      "Negative": 0.18,
+      "Neutral": 0.0839,
+      "Positive": 0.7361
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1789286268124",
+    "timestamp": "2026-09-13 13:27:48",
+    "text": "Couldn't be happier with this update! Absolute fire and works like a charm 🔥❤️",
+    "sentiment": "Positive",
+    "confidence": 0.7361,
+    "platform": "Instagram",
+    "probabilities": {
+      "Negative": 0.18,
+      "Neutral": 0.0839,
+      "Positive": 0.7361
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1789114229857",
+    "timestamp": "2026-09-11 13:40:29",
+    "text": "session feels honey.",
+    "sentiment": "Neutral",
+    "confidence": 0.4519,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.271,
+      "Neutral": 0.4519,
+      "Positive": 0.2771
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1789114220830",
+    "timestamp": "2026-09-11 13:40:20",
+    "text": "session feels proud .",
+    "sentiment": "Positive",
+    "confidence": 0.5405,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.1334,
+      "Neutral": 0.3261,
+      "Positive": 0.5405
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1789114184447",
+    "timestamp": "2026-09-11 13:39:44",
+    "text": "session feels bit satisfy .",
+    "sentiment": "Neutral",
+    "confidence": 0.4519,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.271,
+      "Neutral": 0.4519,
+      "Positive": 0.2771
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1789113216334",
+    "timestamp": "2026-09-11 13:23:36",
+    "text": "Not bad at all, actually quite decent and worth every penny!",
+    "sentiment": "Positive",
+    "confidence": 0.7159,
+    "platform": "Reddit",
+    "probabilities": {
+      "Negative": 0.2335,
+      "Neutral": 0.0505,
+      "Positive": 0.7159
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1789113211076",
+    "timestamp": "2026-09-11 13:23:31",
+    "text": "Not bad at all, actually quite decent and worth every penny!",
+    "sentiment": "Positive",
+    "confidence": 0.7159,
+    "platform": "LinkedIn",
+    "probabilities": {
+      "Negative": 0.2335,
+      "Neutral": 0.0505,
+      "Positive": 0.7159
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1789109036516",
+    "timestamp": "2026-09-11 12:13:56",
+    "text": "This feature is a breath of fresh air.",
+    "sentiment": "Negative",
+    "confidence": 0.4219,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.4219,
+      "Neutral": 0.3846,
+      "Positive": 0.1935
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1789104444201",
+    "timestamp": "2026-09-11 10:57:24",
+    "text": "This service is top-notch.",
+    "sentiment": "Positive",
+    "confidence": 0.711,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.1356,
+      "Neutral": 0.1534,
+      "Positive": 0.711
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1789104429388",
+    "timestamp": "2026-09-11 10:57:09",
+    "text": "This app is a game changer.",
+    "sentiment": "Neutral",
+    "confidence": 0.4054,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.3675,
+      "Neutral": 0.4054,
+      "Positive": 0.2271
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1789104414823",
+    "timestamp": "2026-09-11 10:56:54",
+    "text": "Everything went smooth as silk.",
+    "sentiment": "Positive",
+    "confidence": 0.6403,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.0521,
+      "Neutral": 0.3076,
+      "Positive": 0.6403
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1789104414639",
+    "timestamp": "2026-09-11 10:56:54",
+    "text": "Everything went smooth as silk.",
+    "sentiment": "Positive",
+    "confidence": 0.6403,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.0521,
+      "Neutral": 0.3076,
+      "Positive": 0.6403
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1789103589052",
+    "timestamp": "2026-09-11 10:43:09",
+    "text": "Smooth sailing, if you ignore all the crashes.",
+    "sentiment": "Negative",
+    "confidence": 0.7102,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.7102,
+      "Neutral": 0.1627,
+      "Positive": 0.1271
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1789103576962",
+    "timestamp": "2026-09-11 10:42:56",
+    "text": "Fantastic. They really knocked it out of the park with this disaster.",
+    "sentiment": "Negative",
+    "confidence": 0.7476,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.7476,
+      "Neutral": 0.1574,
+      "Positive": 0.095
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1789103563303",
+    "timestamp": "2026-09-11 10:42:43",
+    "text": "I guess the developers decided to throw in the towel.",
+    "sentiment": "Neutral",
+    "confidence": 0.648,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.129,
+      "Neutral": 0.648,
+      "Positive": 0.223
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1789103207724",
+    "timestamp": "2026-09-11 10:36:47",
+    "text": "Hi am  deserved candidate for aws",
+    "sentiment": "Neutral",
+    "confidence": 0.7461,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.0918,
+      "Neutral": 0.7461,
+      "Positive": 0.1621
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1789103180103",
+    "timestamp": "2026-09-11 10:36:20",
+    "text": "Hi am well deserved candidate",
+    "sentiment": "Positive",
+    "confidence": 0.5682,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.1266,
+      "Neutral": 0.3052,
+      "Positive": 0.5682
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788940965081",
+    "timestamp": "2026-09-09 13:32:45",
+    "text": "Not bad at all, actually quite decent and worth every penny!",
+    "sentiment": "Positive",
+    "confidence": 0.7509,
+    "platform": "LinkedIn",
+    "probabilities": {
+      "Negative": 0.19,
+      "Neutral": 0.0591,
+      "Positive": 0.7509
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788940334024",
+    "timestamp": "2026-09-09 13:22:14",
+    "text": "Fantastic. They really knocked it out of the park with this disaster.",
+    "sentiment": "Negative",
+    "confidence": 0.7872,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.7872,
+      "Neutral": 0.1275,
+      "Positive": 0.0854
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788940333844",
+    "timestamp": "2026-09-09 13:22:13",
+    "text": "Fantastic. They really knocked it out of the park with this disaster.",
+    "sentiment": "Negative",
+    "confidence": 0.7872,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.7872,
+      "Neutral": 0.1275,
+      "Positive": 0.0854
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788940332263",
+    "timestamp": "2026-09-09 13:22:12",
+    "text": "Fantastic. They really knocked it out of the park with this disaster.",
+    "sentiment": "Negative",
+    "confidence": 0.7872,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.7872,
+      "Neutral": 0.1275,
+      "Positive": 0.0854
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788940313827",
+    "timestamp": "2026-09-09 13:21:53",
+    "text": "Smooth sailing, if you ignore all the crashes.",
+    "sentiment": "Negative",
+    "confidence": 0.7268,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.7268,
+      "Neutral": 0.1399,
+      "Positive": 0.1333
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788940303380",
+    "timestamp": "2026-09-09 13:21:43",
+    "text": "Smooth sailing, if you ignore all the",
+    "sentiment": "Positive",
+    "confidence": 0.688,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.1922,
+      "Neutral": 0.1198,
+      "Positive": 0.688
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788940283543",
+    "timestamp": "2026-09-09 13:21:23",
+    "text": "Well, this update certainly takes the cake.",
+    "sentiment": "Neutral",
+    "confidence": 0.5358,
+    "platform": "YouTube",
+    "probabilities": {
+      "Negative": 0.1343,
+      "Neutral": 0.5358,
+      "Positive": 0.3299
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788940270150",
+    "timestamp": "2026-09-09 13:21:10",
+    "text": "Here is the scheduled software update timeline and maintenance release notes.",
+    "sentiment": "Neutral",
+    "confidence": 0.7597,
+    "platform": "YouTube",
+    "probabilities": {
+      "Negative": 0.1402,
+      "Neutral": 0.7597,
+      "Positive": 0.1001
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788940263697",
+    "timestamp": "2026-09-09 13:21:03",
+    "text": "I thought it would be amazing, but it turned out to be a complete disappointment.",
+    "sentiment": "Negative",
+    "confidence": 0.6395,
+    "platform": "Reddit",
+    "probabilities": {
+      "Negative": 0.6395,
+      "Neutral": 0.1461,
+      "Positive": 0.2145
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788938882647",
+    "timestamp": "2026-09-09 12:58:02",
+    "text": "This phone is worth its weight in gold.",
+    "sentiment": "Positive",
+    "confidence": 0.7004,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.079,
+      "Neutral": 0.2206,
+      "Positive": 0.7004
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788938882462",
+    "timestamp": "2026-09-09 12:58:02",
+    "text": "This phone is worth its weight in gold.",
+    "sentiment": "Positive",
+    "confidence": 0.7004,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.079,
+      "Neutral": 0.2206,
+      "Positive": 0.7004
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788938860856",
+    "timestamp": "2026-09-09 12:57:40",
+    "text": "That performance stole the show.",
+    "sentiment": "Neutral",
+    "confidence": 0.4875,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.2595,
+      "Neutral": 0.4875,
+      "Positive": 0.253
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788938846864",
+    "timestamp": "2026-09-09 12:57:26",
+    "text": "This movie blew my socks off!",
+    "sentiment": "Positive",
+    "confidence": 0.4457,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.1491,
+      "Neutral": 0.4052,
+      "Positive": 0.4457
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788938805216",
+    "timestamp": "2026-09-09 12:56:45",
+    "text": "Don't bite the hand that feeds you.",
+    "sentiment": "Neutral",
+    "confidence": 0.3828,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.2835,
+      "Neutral": 0.3828,
+      "Positive": 0.3337
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788938795627",
+    "timestamp": "2026-09-09 12:56:35",
+    "text": "This feature is a breath of fresh air.",
+    "sentiment": "Neutral",
+    "confidence": 0.4292,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.3892,
+      "Neutral": 0.4292,
+      "Positive": 0.1816
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788938777904",
+    "timestamp": "2026-09-09 12:56:17",
+    "text": "The team hit it out of the park today!",
+    "sentiment": "Neutral",
+    "confidence": 0.4235,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.2743,
+      "Neutral": 0.4235,
+      "Positive": 0.3021
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788938597864",
+    "timestamp": "2026-09-09 12:53:17",
+    "text": "Couldn't be happier with this update! Absolute fire and works like a charm 🔥❤️",
+    "sentiment": "Positive",
+    "confidence": 0.7566,
+    "platform": "Instagram",
+    "probabilities": {
+      "Negative": 0.1479,
+      "Neutral": 0.0955,
+      "Positive": 0.7566
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788891575458",
+    "timestamp": "2026-09-08 23:49:35",
+    "text": "Not bad at all, actually quite decent",
+    "sentiment": "Positive",
+    "confidence": 0.7253,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.2018,
+      "Neutral": 0.0729,
+      "Positive": 0.7253
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788891569579",
+    "timestamp": "2026-09-08 23:49:29",
+    "text": "The product is good but the customer service was completely awful and ruined everything",
+    "sentiment": "Negative",
+    "confidence": 0.8234,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.8234,
+      "Neutral": 0.1028,
+      "Positive": 0.0738
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788891300106",
+    "timestamp": "2026-09-08 23:45:00",
+    "text": "Your ability to solve problems quickly has improved our team output",
+    "sentiment": "Negative",
+    "confidence": 0.6561,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.6561,
+      "Neutral": 0.115,
+      "Positive": 0.2289
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788891130606",
+    "timestamp": "2026-09-08 23:42:10",
+    "text": "Your ability to solve problems quickly has improved our team output",
+    "sentiment": "Negative",
+    "confidence": 0.6561,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.6561,
+      "Neutral": 0.115,
+      "Positive": 0.2289
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788891078300",
+    "timestamp": "2026-09-08 23:41:18",
+    "text": "hi",
+    "sentiment": "Neutral",
+    "confidence": 0.3576,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.3203,
+      "Neutral": 0.3576,
+      "Positive": 0.3221
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788891070169",
+    "timestamp": "2026-09-08 23:41:10",
+    "text": "http://127.0.0.1:5000",
+    "sentiment": "Neutral",
+    "confidence": 0.3333,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.3333,
+      "Neutral": 0.3333,
+      "Positive": 0.3333
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788887663284",
+    "timestamp": "2026-09-08 22:44:23",
+    "text": "good morning with all kind oh",
+    "sentiment": "Negative",
+    "confidence": 0.9785,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.9785,
+      "Neutral": 0.0072,
+      "Positive": 0.0143
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788887490809",
+    "timestamp": "2026-09-08 22:41:30",
+    "text": "good morning with all kind oh",
+    "sentiment": "Negative",
+    "confidence": 0.9785,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.9785,
+      "Neutral": 0.0072,
+      "Positive": 0.0143
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788887473535",
+    "timestamp": "2026-09-08 22:41:13",
+    "text": "good morning with all",
+    "sentiment": "Negative",
+    "confidence": 0.9648,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.9648,
+      "Neutral": 0.0076,
+      "Positive": 0.0275
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788770212927_0",
+    "timestamp": "2026-09-07 14:06:52",
+    "text": "This product is a breath of fresh air!",
+    "sentiment": "Negative",
+    "confidence": 0.7032,
+    "platform": "CSV Upload",
+    "probabilities": {
+      "Negative": 0.7032,
+      "Neutral": 0.1542,
+      "Positive": 0.1427
+    }
+  },
+  {
+    "id": "hist_1788770212927_1",
+    "timestamp": "2026-09-07 14:06:52",
+    "text": "You guys really hit the nail on the head with this update.",
+    "sentiment": "Negative",
+    "confidence": 0.5688,
+    "platform": "CSV Upload",
+    "probabilities": {
+      "Negative": 0.5688,
+      "Neutral": 0.1989,
+      "Positive": 0.2323
+    }
+  },
+  {
+    "id": "hist_1788770212927_2",
+    "timestamp": "2026-09-07 14:06:52",
+    "text": "This service is top-notch and worth every penny.",
+    "sentiment": "Neutral",
+    "confidence": 0.537,
+    "platform": "CSV Upload",
+    "probabilities": {
+      "Negative": 0.3514,
+      "Neutral": 0.537,
+      "Positive": 0.1116
+    }
+  },
+  {
+    "id": "hist_1788770212927_3",
+    "timestamp": "2026-09-07 14:06:52",
+    "text": "The new design is right up my alley.",
+    "sentiment": "Positive",
+    "confidence": 0.5839,
+    "platform": "CSV Upload",
+    "probabilities": {
+      "Negative": 0.2228,
+      "Neutral": 0.1933,
+      "Positive": 0.5839
+    }
+  },
+  {
+    "id": "hist_1788770212927_4",
+    "timestamp": "2026-09-07 14:06:52",
+    "text": "They knocked it out of the park with this release!",
+    "sentiment": "Negative",
+    "confidence": 0.9169,
+    "platform": "CSV Upload",
+    "probabilities": {
+      "Negative": 0.9169,
+      "Neutral": 0.0251,
+      "Positive": 0.058
+    }
+  },
+  {
+    "id": "hist_1788770212927_5",
+    "timestamp": "2026-09-07 14:06:52",
+    "text": "The company really dropped the ball this time.",
+    "sentiment": "Positive",
+    "confidence": 0.5323,
+    "platform": "CSV Upload",
+    "probabilities": {
+      "Negative": 0.4294,
+      "Neutral": 0.0383,
+      "Positive": 0.5323
+    }
+  },
+  {
+    "id": "hist_1788770212927_6",
+    "timestamp": "2026-09-07 14:06:52",
+    "text": "This app is driving me up the wall.",
+    "sentiment": "Positive",
+    "confidence": 0.6456,
+    "platform": "CSV Upload",
+    "probabilities": {
+      "Negative": 0.1622,
+      "Neutral": 0.1921,
+      "Positive": 0.6456
+    }
+  },
+  {
+    "id": "hist_1788770212927_7",
+    "timestamp": "2026-09-07 14:06:52",
+    "text": "The whole experience left a bad taste in my mouth.",
+    "sentiment": "Positive",
+    "confidence": 0.8409,
+    "platform": "CSV Upload",
+    "probabilities": {
+      "Negative": 0.0752,
+      "Neutral": 0.0839,
+      "Positive": 0.8409
+    }
+  },
+  {
+    "id": "hist_1788770212927_8",
+    "timestamp": "2026-09-07 14:06:52",
+    "text": "Not my cup of tea, but I can see why others like it.",
+    "sentiment": "Positive",
+    "confidence": 0.4056,
+    "platform": "CSV Upload",
+    "probabilities": {
+      "Negative": 0.393,
+      "Neutral": 0.2014,
+      "Positive": 0.4056
+    }
+  },
+  {
+    "id": "hist_1788770212927_9",
+    "timestamp": "2026-09-07 14:06:52",
+    "text": "It is what it is; let's see how it goes.",
+    "sentiment": "Neutral",
+    "confidence": 0.5698,
+    "platform": "CSV Upload",
+    "probabilities": {
+      "Negative": 0.2707,
+      "Neutral": 0.5698,
+      "Positive": 0.1595
+    }
+  },
+  {
+    "id": "hist_1788769317513",
+    "timestamp": "2026-09-07 13:51:57",
+    "text": "Good price, poor quality.",
+    "sentiment": "Positive",
+    "confidence": 0.7358,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.112,
+      "Neutral": 0.1522,
+      "Positive": 0.7358
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788769098463",
+    "timestamp": "2026-09-07 13:48:18",
+    "text": "We'll see.",
+    "sentiment": "Neutral",
+    "confidence": 0.4004,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.2897,
+      "Neutral": 0.4004,
+      "Positive": 0.3099
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788769082305",
+    "timestamp": "2026-09-07 13:48:02",
+    "text": "I'm extremely disappointed and angry.",
+    "sentiment": "Negative",
+    "confidence": 0.9626,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.9626,
+      "Neutral": 0.0203,
+      "Positive": 0.0171
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788769071468",
+    "timestamp": "2026-09-07 13:47:51",
+    "text": "I'm honestly heartbroken after seeing this.",
+    "sentiment": "Negative",
+    "confidence": 0.5457,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.5457,
+      "Neutral": 0.1045,
+      "Positive": 0.3498
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788769061261",
+    "timestamp": "2026-09-07 13:47:41",
+    "text": "This brought tears to my eyes.",
+    "sentiment": "Positive",
+    "confidence": 0.5141,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.0661,
+      "Neutral": 0.4198,
+      "Positive": 0.5141
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788769048746",
+    "timestamp": "2026-09-07 13:47:28",
+    "text": "I'm so proud of you! ❤️",
+    "sentiment": "Positive",
+    "confidence": 0.9893,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.0063,
+      "Neutral": 0.0044,
+      "Positive": 0.9893
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788768619631",
+    "timestamp": "2026-09-07 13:40:19",
+    "text": "The movie was visually stunning but incredibly boring.",
+    "sentiment": "Negative",
+    "confidence": 0.5019,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.5019,
+      "Neutral": 0.2718,
+      "Positive": 0.2264
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788768607079",
+    "timestamp": "2026-09-07 13:40:07",
+    "text": "Good price, poor quality.",
+    "sentiment": "Positive",
+    "confidence": 0.7358,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.112,
+      "Neutral": 0.1522,
+      "Positive": 0.7358
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788768584812",
+    "timestamp": "2026-09-07 13:39:44",
+    "text": "Not bad.",
+    "sentiment": "Negative",
+    "confidence": 0.8932,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.8932,
+      "Neutral": 0.0983,
+      "Positive": 0.0085
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788768571595",
+    "timestamp": "2026-09-07 13:39:31",
+    "text": "That's something.",
+    "sentiment": "Neutral",
+    "confidence": 0.8026,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.1186,
+      "Neutral": 0.8026,
+      "Positive": 0.0788
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788768533617",
+    "timestamp": "2026-09-07 13:38:53",
+    "text": "This situation is walking on thin ice.",
+    "sentiment": "Negative",
+    "confidence": 0.7235,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.7235,
+      "Neutral": 0.2074,
+      "Positive": 0.0691
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788768515232",
+    "timestamp": "2026-09-07 13:38:35",
+    "text": "The launch got off on the wrong foot.",
+    "sentiment": "Neutral",
+    "confidence": 0.7353,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.1242,
+      "Neutral": 0.7353,
+      "Positive": 0.1406
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788768502661",
+    "timestamp": "2026-09-07 13:38:22",
+    "text": "They are beating a dead horse with this idea.",
+    "sentiment": "Negative",
+    "confidence": 0.7124,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.7124,
+      "Neutral": 0.1722,
+      "Positive": 0.1154
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788768399572",
+    "timestamp": "2026-09-07 13:36:39",
+    "text": "good morning",
+    "sentiment": "Positive",
+    "confidence": 0.9007,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.0379,
+      "Neutral": 0.0614,
+      "Positive": 0.9007
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788758018864",
+    "timestamp": "2026-09-07 10:43:38",
+    "text": "Hi am fine, how about you",
+    "sentiment": "Positive",
+    "confidence": 0.8717,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.054,
+      "Neutral": 0.0744,
+      "Positive": 0.8717
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788757984202",
+    "timestamp": "2026-09-07 10:43:04",
+    "text": "Good morning",
+    "sentiment": "Positive",
+    "confidence": 0.9007,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.0379,
+      "Neutral": 0.0614,
+      "Positive": 0.9007
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788757944010",
+    "timestamp": "2026-09-07 10:42:24",
+    "text": "This service is top-notch.",
+    "sentiment": "Negative",
+    "confidence": 0.4501,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.4501,
+      "Neutral": 0.2956,
+      "Positive": 0.2543
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788757927427",
+    "timestamp": "2026-09-07 10:42:07",
+    "text": "You guys hit the nail on the head with this update.",
+    "sentiment": "Neutral",
+    "confidence": 0.5182,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.3547,
+      "Neutral": 0.5182,
+      "Positive": 0.1271
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788757911186",
+    "timestamp": "2026-09-07 10:41:51",
+    "text": "This product is a breath of fresh air.",
+    "sentiment": "Negative",
+    "confidence": 0.7032,
+    "platform": "Instagram",
+    "probabilities": {
+      "Negative": 0.7032,
+      "Neutral": 0.1542,
+      "Positive": 0.1427
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788757894541",
+    "timestamp": "2026-09-07 10:41:34",
+    "text": "This product is a breath of fresh air.",
+    "sentiment": "Negative",
+    "confidence": 0.7032,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.7032,
+      "Neutral": 0.1542,
+      "Positive": 0.1427
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788757760588",
+    "timestamp": "2026-09-07 10:39:20",
+    "text": "Hi welcome to the store",
+    "sentiment": "Neutral",
+    "confidence": 0.5619,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.2664,
+      "Neutral": 0.5619,
+      "Positive": 0.1716
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788757617809_0",
+    "timestamp": "2026-09-07 10:36:57",
+    "text": "Love this app",
+    "sentiment": "Negative",
+    "confidence": 0.3913,
+    "platform": "Batch Input",
+    "probabilities": {
+      "Negative": 0.3913,
+      "Neutral": 0.2654,
+      "Positive": 0.3433
+    }
+  },
+  {
+    "id": "hist_1788757617809_1",
+    "timestamp": "2026-09-07 10:36:57",
+    "text": "Hate the bug",
+    "sentiment": "Negative",
+    "confidence": 0.4793,
+    "platform": "Batch Input",
+    "probabilities": {
+      "Negative": 0.4793,
+      "Neutral": 0.1964,
+      "Positive": 0.3243
+    }
+  },
+  {
+    "id": "hist_1788757617809_2",
+    "timestamp": "2026-09-07 10:36:57",
+    "text": "Neutral update",
+    "sentiment": "Neutral",
+    "confidence": 0.931,
+    "platform": "Batch Input",
+    "probabilities": {
+      "Negative": 0.0385,
+      "Neutral": 0.931,
+      "Positive": 0.0305
+    }
+  },
+  {
+    "id": "hist_1788757590333",
+    "timestamp": "2026-09-07 10:36:30",
+    "text": "Honestly loving this new update, gives me so much hope!",
+    "sentiment": "Positive",
+    "confidence": 0.9958,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.0014,
+      "Neutral": 0.0028,
+      "Positive": 0.9958
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788757503561",
+    "timestamp": "2026-09-07 10:35:03",
+    "text": "Honestly loving this new update, gives me so much hope!",
+    "sentiment": "Positive",
+    "confidence": 0.9958,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.0014,
+      "Neutral": 0.0028,
+      "Positive": 0.9958
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788757209221_0",
+    "timestamp": "2026-09-07 10:30:09",
+    "text": "Awesome tool!",
+    "sentiment": "Negative",
+    "confidence": 0.3501,
+    "platform": "Batch Input",
+    "probabilities": {
+      "Negative": 0.3501,
+      "Neutral": 0.3308,
+      "Positive": 0.3192
+    }
+  },
+  {
+    "id": "hist_1788757013065",
+    "timestamp": "2026-09-07 10:26:53",
+    "text": "Here is what is happening with the new product rollout.",
+    "sentiment": "Neutral",
+    "confidence": 0.8926,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.1005,
+      "Neutral": 0.8926,
+      "Positive": 0.0068
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788757013061",
+    "timestamp": "2026-09-07 10:26:53",
+    "text": "Honestly loving the new team workflow, it gives me so much hope!",
+    "sentiment": "Positive",
+    "confidence": 0.9997,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.0002,
+      "Neutral": 0.0002,
+      "Positive": 0.9997
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788757013056",
+    "timestamp": "2026-09-07 10:26:53",
+    "text": "Feeling stressed and overwhelmed with constant deadlines.",
+    "sentiment": "Negative",
+    "confidence": 0.9994,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.9994,
+      "Neutral": 0.0003,
+      "Positive": 0.0004
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788756989546",
+    "timestamp": "2026-09-07 10:26:29",
+    "text": "I love this product, it is amazing and wonderful!",
+    "sentiment": "Positive",
+    "confidence": 0.4894,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.4589,
+      "Neutral": 0.0517,
+      "Positive": 0.4894
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_1788756978041",
+    "timestamp": "2026-09-07 10:26:18",
+    "text": "Antigravity AI is extraordinarily intuitive, responsive, and powerful!",
+    "sentiment": "Negative",
+    "confidence": 0.7905,
+    "platform": "Direct Input",
+    "probabilities": {
+      "Negative": 0.7905,
+      "Neutral": 0.1102,
+      "Positive": 0.0993
+    },
+    "tags": []
+  },
+  {
+    "id": "hist_001",
+    "timestamp": "2026-09-07 10:26:18",
+    "text": "The new update has made our team collaboration so much faster and seamless! Absolute game changer.",
+    "sentiment": "Positive",
+    "confidence": 0.9421,
+    "platform": "Twitter",
+    "probabilities": {
+      "Positive": 0.9421,
+      "Neutral": 0.0412,
+      "Negative": 0.0167
+    }
+  },
+  {
+    "id": "hist_002",
+    "timestamp": "2026-09-07 10:26:18",
+    "text": "Constant disconnects and zero support response for over 48 hours. Completely unacceptable service.",
+    "sentiment": "Negative",
+    "confidence": 0.9634,
+    "platform": "Reddit",
+    "probabilities": {
+      "Negative": 0.9634,
+      "Neutral": 0.0245,
+      "Positive": 0.0121
+    }
+  },
+  {
+    "id": "hist_003",
+    "timestamp": "2026-09-07 10:26:18",
+    "text": "Attending the annual developer summit tomorrow at 10 AM in hall B.",
+    "sentiment": "Neutral",
+    "confidence": 0.8876,
+    "platform": "LinkedIn",
+    "probabilities": {
+      "Neutral": 0.8876,
+      "Positive": 0.0612,
+      "Negative": 0.0512
+    }
+  }
+]

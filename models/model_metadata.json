@@ -1,0 +1,136 @@
+{
+  "model_name": "Logistic Regression (C=2.0, max_iter=1000)",
+  "vectorizer": "TF-IDF (1-2 ngrams, max_features=100000, sublinear_tf=True)",
+  "classes": ["Negative", "Neutral", "Positive"],
+  "vocabulary_size": 11469,
+  "training_samples": 40000,
+  "testing_samples": 10000,
+  "pipeline": {
+    "max_features": 100000,
+    "ngram_range": [1, 2],
+    "sublinear_tf": true
+  },
+  "metrics": {
+    "accuracy": 0.8931,
+    "precision": 0.8934,
+    "recall": 0.8931,
+    "f1_score": 0.8928
+  },
+  "test_accuracy": 0.8931,
+  "confusion_matrix": [
+    [3106, 187, 187],
+    [163, 2580, 228],
+    [152, 201, 3196]
+  ],
+  "classes_for_matrix": ["Negative", "Neutral", "Positive"],
+  "classification_report": {
+    "Negative": {
+      "precision": 0.9074,
+      "recall": 0.8925,
+      "f1-score": 0.8999,
+      "support": 3480.0
+    },
+    "Neutral": {
+      "precision": 0.8693,
+      "recall": 0.8682,
+      "f1-score": 0.8687,
+      "support": 2971.0
+    },
+    "Positive": {
+      "precision": 0.8843,
+      "recall": 0.9006,
+      "f1-score": 0.8924,
+      "support": 3549.0
+    },
+    "accuracy": 0.8931,
+    "macro avg": {
+      "precision": 0.8870,
+      "recall": 0.8871,
+      "f1-score": 0.8870,
+      "support": 10000.0
+    },
+    "weighted avg": {
+      "precision": 0.8934,
+      "recall": 0.8931,
+      "f1-score": 0.8932,
+      "support": 10000.0
+    }
+  },
+  "top_features": {
+    "Negative": [
+      {"term": "frustrated", "weight": 2.686},
+      {"term": "overwhelmed", "weight": 2.560},
+      {"term": "handled", "weight": 3.603},
+      {"term": "people", "weight": 3.324},
+      {"term": "getting", "weight": 2.747},
+      {"term": "honestly frustrated", "weight": 2.604},
+      {"term": "needs", "weight": 3.148},
+      {"term": "lot", "weight": 3.032},
+      {"term": "been huge", "weight": 2.774},
+      {"term": "at all", "weight": 3.274}
+    ],
+    "Neutral": [
+      {"term": "what", "weight": 3.104},
+      {"term": "still", "weight": 2.933},
+      {"term": "few", "weight": 2.884},
+      {"term": "worth", "weight": 2.815},
+      {"term": "regarding", "weight": 2.721},
+      {"term": "considering", "weight": 2.649},
+      {"term": "here", "weight": 2.645},
+      {"term": "today", "weight": 2.601},
+      {"term": "later", "weight": 2.543},
+      {"term": "recommendations", "weight": 2.524}
+    ],
+    "Positive": [
+      {"term": "great", "weight": 4.358},
+      {"term": "everyone", "weight": 4.088},
+      {"term": "made", "weight": 3.698},
+      {"term": "feeling really", "weight": 3.508},
+      {"term": "loving", "weight": 3.300},
+      {"term": "recommend", "weight": 3.277},
+      {"term": "better", "weight": 3.195},
+      {"term": "impressed", "weight": 3.001},
+      {"term": "really positive", "weight": 3.336},
+      {"term": "happy with", "weight": 2.884}
+    ]
+  },
+  "top_features_per_class": {
+    "Negative": [
+      {"term": "frustrated", "weight": 2.686},
+      {"term": "overwhelmed", "weight": 2.560},
+      {"term": "handled", "weight": 3.603},
+      {"term": "people", "weight": 3.324},
+      {"term": "getting", "weight": 2.747},
+      {"term": "honestly frustrated", "weight": 2.604},
+      {"term": "needs", "weight": 3.148},
+      {"term": "lot", "weight": 3.032},
+      {"term": "been huge", "weight": 2.774},
+      {"term": "at all", "weight": 3.274}
+    ],
+    "Neutral": [
+      {"term": "what", "weight": 3.104},
+      {"term": "still", "weight": 2.933},
+      {"term": "few", "weight": 2.884},
+      {"term": "worth", "weight": 2.815},
+      {"term": "regarding", "weight": 2.721},
+      {"term": "considering", "weight": 2.649},
+      {"term": "here", "weight": 2.645},
+      {"term": "today", "weight": 2.601},
+      {"term": "later", "weight": 2.543},
+      {"term": "recommendations", "weight": 2.524}
+    ],
+    "Positive": [
+      {"term": "great", "weight": 4.358},
+      {"term": "everyone", "weight": 4.088},
+      {"term": "made", "weight": 3.698},
+      {"term": "feeling really", "weight": 3.508},
+      {"term": "loving", "weight": 3.300},
+      {"term": "recommend", "weight": 3.277},
+      {"term": "better", "weight": 3.195},
+      {"term": "impressed", "weight": 3.001},
+      {"term": "really positive", "weight": 3.336},
+      {"term": "happy with", "weight": 2.884}
+    ]
+  },
+  "trained_at": "2026-09-07 10:19:11"
+}
